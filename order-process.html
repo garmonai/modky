@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как мы работаем — ВкусноКухни</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2.5em;
+        }
+        .process-step {
+            background: #f0f6fa;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.08);
+            padding: 2em 1.5em 1.5em 1.5em;
+            text-align: center;
+            position: relative;
+            transition: box-shadow 0.2s;
+        }
+        .process-step:hover {
+            box-shadow: 0 4px 16px rgba(52, 152, 219, 0.18);
+        }
+        .process-step .step-icon {
+            font-size: 2.5em;
+            color: var(--accent-color);
+            margin-bottom: 0.7em;
+        }
+        .process-step strong {
+            display: block;
+            margin-bottom: 0.5em;
+            color: var(--primary-color);
+            font-size: 1.15em;
+        }
+        .team-section {
+            background: #f5f5f5;
+            border-radius: 12px;
+            padding: 2em 1.5em;
+            margin-bottom: 2em;
+        }
+        .team-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5em;
+            justify-content: center;
+        }
+        .team-member-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+            padding: 1.2em 1em;
+            min-width: 220px;
+            max-width: 260px;
+            flex: 1 1 220px;
+            text-align: center;
+        }
+        .team-member-card .fa {
+            font-size: 2em;
+            color: var(--secondary-color);
+            margin-bottom: 0.5em;
+        }
+        .team-member-card strong {
+            color: var(--primary-color);
+            font-size: 1.08em;
+        }
+        .team-member-card p {
+            margin: 0.5em 0 0 0;
+            color: #555;
+            font-size: 0.98em;
+        }
+        .accent-block {
+            background: linear-gradient(90deg, #eaf6fd 0%, #d4eafd 100%);
+            color: var(--primary-color);
+            border-radius: 10px;
+            padding: 1.5em 1em;
+            margin-bottom: 2em;
+            text-align: center;
+            font-weight: 500;
+            font-size: 1.1em;
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.10);
+        }
+        @media (max-width: 700px) {
+            .process-steps { grid-template-columns: 1fr; }
+            .team-list { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <img src="pic/image-no-bg-preview (carve.photos).png" alt="ВкусноКухни">
+                <h1>ВкусноКухни</h1>
+            </div>
+            <div class="header-right">
+                <a href="account.html" class="account-link">
+                    <i class="fas fa-user"></i>
+                    <span>Личный кабинет</span>
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="clock"></div>
+                <div class="contact-phone">
+                    <i class="fas fa-phone"></i>
+                    <span>+7 (XXX) XXX-XX-XX</span>
+                </div>
+            </div>
+        </div>
+        <button class="accessibility-btn" id="accessibilityBtn">
+            <i class="fas fa-universal-access"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О компании</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="order-process.html">Как мы работаем</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск...">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+                <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Корзина</span>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="document-page">
+            <div class="document-container">
+                <h2 style="margin-bottom: 1.2em;">Как мы работаем: от заказа до сборки</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fas fa-shopping-cart"></i></div>
+                        <strong>Оформление заказа</strong>
+                        <div>Вы выбираете кухни и добавляете их в корзину. Затем оформляете заказ, указывая контакты и адрес.</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fas fa-phone-volume"></i></div>
+                        <strong>Подтверждение заказа</strong>
+                        <div>Менеджер связывается с вами для уточнения деталей, сроков и стоимости.</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fas fa-credit-card"></i></div>
+                        <strong>Оплата</strong>
+                        <div>Оплата удобным способом: наличными, картой или по безналу. Возможна предоплата.</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fas fa-industry"></i></div>
+                        <strong>Производство и комплектация</strong>
+                        <div>Заказ передаётся в производство. Материалы и фурнитура подбираются технологом.</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fas fa-clipboard-check"></i></div>
+                        <strong>Контроль качества</strong>
+                        <div>Каждый заказ проходит обязательный контроль качества и комплектации.</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fas fa-truck"></i></div>
+                        <strong>Доставка</strong>
+                        <div>Доставка собственной службой или ТК. Согласуем дату и время заранее.</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fas fa-tools"></i></div>
+                        <strong>Сборка и установка</strong>
+                        <div>Профессиональная сборка и установка на месте опытными мастерами.</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fas fa-shield-alt"></i></div>
+                        <strong>Гарантия и поддержка</strong>
+                        <div>Гарантия на все изделия. Сервис и поддержка после покупки.</div>
+                    </div>
+                </div>
+                <div class="accent-block">
+                    <i class="fas fa-info-circle" style="margin-right:0.5em;"></i>
+                    <span>Мы сопровождаем ваш заказ на каждом этапе — от консультации до установки и гарантии!</span>
+                </div>
+                <div class="team-section">
+                    <h3 style="text-align:center; margin-bottom:1.2em;">Кто работает над вашим заказом?</h3>
+                    <div class="team-list">
+                        <div class="team-member-card">
+                            <div><i class="fas fa-user-tie"></i></div>
+                            <strong>Менеджер по продажам</strong>
+                            <p>Консультирует, помогает выбрать комплектацию, сопровождает заказ на всех этапах.</p>
+                        </div>
+                        <div class="team-member-card">
+                            <div><i class="fas fa-cogs"></i></div>
+                            <strong>Технолог</strong>
+                            <p>Отвечает за точность замеров, подбор материалов и контроль производства.</p>
+                        </div>
+                        <div class="team-member-card">
+                            <div><i class="fas fa-pencil-ruler"></i></div>
+                            <strong>Дизайнер</strong>
+                            <p>Разрабатывает индивидуальные решения и помогает с выбором стиля.</p>
+                        </div>
+                        <div class="team-member-card">
+                            <div><i class="fas fa-hammer"></i></div>
+                            <strong>Мастера по сборке</strong>
+                            <p>Профессионально собирают и устанавливают кухню у вас дома.</p>
+                        </div>
+                        <div class="team-member-card">
+                            <div><i class="fas fa-headset"></i></div>
+                            <strong>Служба поддержки</strong>
+                            <p>Всегда на связи для решения любых вопросов после покупки.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top:2em; text-align:center;">
+                    <a href="catalog.html" class="go-to-catalog">Перейти в каталог</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="pic/image-no-bg-preview (carve.photos).png" alt="ВкусноКухни">
+                    <h2>ВкусноКухни</h2>
+                </a>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Навигация</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="sitemap.html">Карта сайта</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX</li>
+                        <li><i class="fas fa-envelope"></i> info@vkusnokuhni.ru</li>
+                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Примерная, д. 1</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Мы в соцсетях</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ВкусноКухни. Все права защищены.</p>
+            <p>
+                <a href="doc/privacy.html">Политика конфиденциальности</a> |
+                <a href="doc/terms.html">Пользовательское соглашение</a> |
+                <a href="warranty.html">Гарантия</a>
+            </p>
+        </div>
+    </footer>
+    <script src="js/clock.js"></script>
+    <script src="js/accessibility.js"></script>
+</body>
+</html> 

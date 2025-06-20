@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - ВкусноКухни</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <img src="pic/image-no-bg-preview (carve.photos).png" alt="ВкусноКухни">
+                <h1>ВкусноКухни</h1>
+            </div>
+            <div class="header-right">
+                <a href="account.html" class="account-link">
+                    <i class="fas fa-user"></i>
+                    <span>Личный кабинет</span>
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="clock"></div>
+                <div class="contact-phone">
+                    <i class="fas fa-phone"></i>
+                    <span>+7 (XXX) XXX-XX-XX</span>
+                </div>
+            </div>
+        </div>
+        <button class="accessibility-btn" id="accessibilityBtn" onclick="toggleAccessibility()">
+            <i class="fas fa-eye"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О компании</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="order-process.html">Как мы работаем</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск...">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+                <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Корзина</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="account-container">
+            <div class="account-sidebar">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h2 id="userName">Пользователь</h2>
+                    <p id="userEmail">email@example.com</p>
+                </div>
+                <nav class="account-nav">
+                    <a href="#profile" class="active">Профиль</a>
+                    <a href="orders.html">История заказов</a>
+                    <a href="bonuses.html">Бонусная программа</a>
+                    <a href="discounts.html">Скидки</a>
+                </nav>
+            </div>
+
+            <div class="account-content">
+                <div id="profile" class="tab-content active">
+                    <h2>Профиль</h2>
+                    <div class="profile-info">
+                        <div class="info-group">
+                            <label>Имя:</label>
+                            <span id="profileName">Пользователь</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Email:</label>
+                            <span id="profileEmail">Не указан</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Телефон:</label>
+                            <span id="profilePhone">Не указан</span>
+                        </div>
+                    </div>
+                    <button onclick="editProfile()" class="edit-btn">Редактировать профиль</button>
+                </div>
+
+                <div id="orders" class="tab-content">
+                    <h2>История заказов</h2>
+                    <div id="orderHistory" class="order-history">
+                        <!-- Здесь будет отображаться история заказов -->
+                    </div>
+                </div>
+
+                <div id="bonuses" class="tab-content">
+                    <h2>Бонусная программа</h2>
+                    <div class="bonus-info">
+                        <div class="bonus-card">
+                            <div class="bonus-header">
+                                <h3>Ваши бонусы</h3>
+                                <span class="bonus-amount" id="bonusAmount">0</span>
+                            </div>
+                            <div class="bonus-progress">
+                                <div class="progress-bar">
+                                    <div class="progress" id="bonusProgress"></div>
+                                </div>
+                                <p>До следующего уровня: <span id="nextLevel">1000</span> бонусов</p>
+                            </div>
+                        </div>
+                        <div class="bonus-rules">
+                            <h3>Как накопить бонусы?</h3>
+                            <ul>
+                                <li>1 бонус = 1 рубль</li>
+                                <li>Начисление 5% от суммы заказа</li>
+                                <li>Бонусы можно использовать при оплате</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="discounts" class="tab-content">
+                    <h2>Ваши скидки</h2>
+                    <div class="discounts-list" id="discountsList">
+                        <!-- Здесь будут отображаться скидки -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="pic/image-no-bg-preview (carve.photos).png" alt="ВкусноКухни">
+                    <h2>ВкусноКухни</h2>
+                </a>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Навигация</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="sitemap.html">Карта сайта</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX</li>
+                        <li><i class="fas fa-envelope"></i> info@vkusnokuhni.ru</li>
+                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Примерная, д. 1</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Мы в соцсетях</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ВкусноКухни. Все права защищены.</p>
+            <p>
+                <a href="doc/privacy.html">Политика конфиденциальности</a> |
+                <a href="doc/terms.html">Пользовательское соглашение</a> |
+                <a href="warranty.html">Гарантия</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/clock.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script src="js/account.js"></script>
+</body>
+</html> 

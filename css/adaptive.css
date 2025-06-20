@@ -1,0 +1,129 @@
+/* Адаптивные стили */
+@media screen and (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-cart {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-box {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+    }
+
+    section {
+        padding: 2rem 5%;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Стили для версии для слабовидящих */
+body.high-contrast {
+    background: black;
+    color: yellow;
+}
+
+body.high-contrast header,
+body.high-contrast nav,
+body.high-contrast footer,
+body.high-contrast .advantage-item {
+    background: black;
+    color: yellow;
+}
+
+body.high-contrast a {
+    color: yellow;
+}
+
+body.high-contrast .btn,
+body.high-contrast .search-box button {
+    background: yellow;
+    color: black;
+}
+
+body.high-contrast .hero {
+    background: black;
+}
+
+body.high-contrast .footer-column h3 {
+    color: yellow;
+}
+
+body.large-text {
+    font-size: 120%;
+}
+
+body.larger-text {
+    font-size: 150%;
+} 

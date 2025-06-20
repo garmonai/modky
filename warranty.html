@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гарантия - ВкусноКухни</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <img src="pic/image-no-bg-preview (carve.photos).png" alt="ВкусноКухни">
+                <h1>ВкусноКухни</h1>
+            </div>
+            <div class="header-right">
+                <a href="account.html" class="account-link">
+                    <i class="fas fa-user"></i>
+                    <span>Личный кабинет</span>
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="clock"></div>
+                <div class="contact-phone">
+                    <i class="fas fa-phone"></i>
+                    <span>+7 (XXX) XXX-XX-XX</span>
+                </div>
+            </div>
+        </div>
+        <button class="accessibility-btn" id="accessibilityBtn" onclick="toggleAccessibility()">
+            <i class="fas fa-eye"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О компании</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="order-process.html">Как мы работаем</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск...">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+                <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Корзина</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="document-page">
+        <div class="document-container">
+            <h1>Гарантийные обязательства</h1>
+            
+            <section class="document-section">
+                <h2>1. Условия обмена и возврата товара</h2>
+                <p>Настоящие условия распространяются на все модульные кухни, приобретенные в компании "ВкусноКухни".</p>
+                <ul>
+                    <li>Обмен и возврат товара возможен в течение 14 дней с момента получения заказа</li>
+                    <li>Товар должен сохранять товарный вид, комплектность и потребительские свойства</li>
+                    <li>Не подлежат обмену и возврату товары, изготовленные по индивидуальному заказу</li>
+                    <li>При обмене или возврате необходимо предоставить:
+                        <ul>
+                            <li>Документ, удостоверяющий личность</li>
+                            <li>Чек или иной документ, подтверждающий оплату</li>
+                            <li>Заполненное заявление на возврат</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="document-section">
+                <h2>2. Условия возврата оплаты</h2>
+                <p>При возврате товара соблюдаются следующие условия возврата денежных средств:</p>
+                <ul>
+                    <li>Возврат денежных средств осуществляется в течение 10 рабочих дней</li>
+                    <li>Возврат производится тем же способом, которым была произведена оплата</li>
+                    <li>При оплате картой возврат осуществляется на карту, с которой была произведена оплата</li>
+                    <li>При оплате наличными возврат производится в кассе магазина</li>
+                </ul>
+            </section>
+
+            <section class="document-section">
+                <h2>3. Сроки гарантийного ремонта</h2>
+                <p>На все модульные кухни распространяется гарантийное обслуживание:</p>
+                <ul>
+                    <li>Гарантийный срок составляет 24 месяца с момента получения заказа</li>
+                    <li>Срок гарантийного ремонта не превышает 45 календарных дней</li>
+                    <li>В случае невозможности ремонта в установленные сроки, клиент уведомляется об этом</li>
+                    <li>Гарантийный ремонт не распространяется на:
+                        <ul>
+                            <li>Механические повреждения</li>
+                            <li>Повреждения вследствие неправильной эксплуатации</li>
+                            <li>Повреждения, возникшие в результате стихийных бедствий</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="pic/image-no-bg-preview (carve.photos).png" alt="ВкусноКухни">
+                    <h2>ВкусноКухни</h2>
+                </a>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Навигация</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="sitemap.html">Карта сайта</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX</li>
+                        <li><i class="fas fa-envelope"></i> info@vkusnokuhni.ru</li>
+                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Примерная, д. 1</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Мы в соцсетях</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ВкусноКухни. Все права защищены.</p>
+            <p>
+                <a href="doc/privacy.html">Политика конфиденциальности</a> |
+                <a href="doc/terms.html">Пользовательское соглашение</a> |
+                <a href="warranty.html">Гарантия</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/accessibility.js"></script>
+</body>
+</html> 
